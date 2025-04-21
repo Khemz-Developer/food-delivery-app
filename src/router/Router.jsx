@@ -22,7 +22,7 @@ import RejectedOrders from "../pages/shop/RejectedOrders";
 
 import Address from "../pages/shop/Address";
 import OrderTracking from "../pages/dashboard/admin/OrderTracking";
-import Feedback from "../components/FeedBack";
+import Feedback from "../components/Feedback";
 const router = createBrowserRouter([
     {
       path: "/",
