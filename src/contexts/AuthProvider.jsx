@@ -71,7 +71,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser) {
         //after implement jwt and middleware now making this
         const userInfo = { email: currentUser.email };
-        axios.post("http://localhost:3000/jwt", userInfo)
+        axios.post("https://food-delivery-server-hosting.onrender.com/jwt", userInfo)
         .then((response) => {
           //console.log(response.data.token);
           if (response.data.token) {

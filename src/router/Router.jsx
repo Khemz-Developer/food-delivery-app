@@ -102,8 +102,8 @@ const router = createBrowserRouter([
         {
           path: "update-menu/:id",
           element: <UpdateMenuItem />,
-          //loader: ({ params }) => axios.get(`http://localhost:3000/menu/${params.id}`)
-         loader: ({params}) => fetch(`http://localhost:3000/menu/${params.id}`)
+          //loader: ({ params }) => axios.get(`https://food-delivery-server-hosting.onrender.com/menu/${params.id}`)
+         loader: ({params}) => fetch(`https://food-delivery-server-hosting.onrender.com/menu/${params.id}`)
         },
         {
           path:"update-order-status",

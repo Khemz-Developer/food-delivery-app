@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosPublic = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://food-delivery-server-hosting.onrender.com',
    
   });
 

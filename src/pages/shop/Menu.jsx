@@ -18,7 +18,7 @@ const Menu = () => {
     //fetch data from the backend --
     // const fetchData = async () => {
     //   try {
-    //     const responce = await fetch("http://localhost:3000/menu");
+    //     const responce = await fetch("https://food-delivery-server-hosting.onrender.com/menu");
     //     console.log(responce);
     //     const data = await responce.json();
         
@@ -36,7 +36,7 @@ const Menu = () => {
    
     const  fetchData = async () =>{
     try{
-      const response = await axios.get("http://localhost:3000/menu");
+      const response = await axios.get("https://food-delivery-server-hosting.onrender.com/menu");
       // console.log(response.data);
       setMenu(response.data);
       setFilteredItems(response.data);

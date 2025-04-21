@@ -38,7 +38,7 @@ const Cards = ({ item }) => {
   //       email: user.email,
   //     };
 
-  //     fetch("http://localhost:3000/cart", {
+  //     fetch("https://food-delivery-server-hosting.onrender.com/cart", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ const Cards = ({ item }) => {
     if(user && user.email){
         const cartItem = {menuItemId: _id, name, quantity : 1, image, price, email: user.email}
 
-        axios.post('http://localhost:3000/cart', cartItem)
+        axios.post('https://food-delivery-server-hosting.onrender.com/cart', cartItem)
         .then((response) => {
           console.log(response);
           if(response){

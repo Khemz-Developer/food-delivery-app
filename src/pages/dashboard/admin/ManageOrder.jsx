@@ -27,12 +27,12 @@ const ManageOrder = () => {
   const { refetch, data: orders = [] } = useQuery({
     queryKey: ["orders"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:3000/payment/`, {
+      const res = await fetch(`https://food-delivery-server-hosting.onrender.com/payment/`, {
         headers: {
           authorization: `Bearer ${token}`,
         },
       });
-      //const res = await fetch(`http://localhost:3000/cart?email=${user?.email}`);
+      //const res = await fetch(`https://food-delivery-server-hosting.onrender.com/cart?email=${user?.email}`);
       return res.json();
     },
   });

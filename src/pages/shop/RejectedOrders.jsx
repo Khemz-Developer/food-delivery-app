@@ -26,14 +26,14 @@ const RejectedOrders = () => {
     queryKey: ["orders", user?.email],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:3000/payment/rejected-orders/${user?.email}`,
+        `https://food-delivery-server-hosting.onrender.com/payment/rejected-orders/${user?.email}`,
         {
           headers: {
             authorization: `Bearer ${token}`,
           },
         }
       );
-      //const res = await fetch(`http://localhost:3000/cart?email=${user?.email}`);
+      //const res = await fetch(`https://food-delivery-server-hosting.onrender.com/cart?email=${user?.email}`);
 
       return res.json();
     },

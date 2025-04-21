@@ -4,7 +4,7 @@ const useCategory = () => {
     const { refetch, data: categories = [] } = useQuery({
         queryKey: "categories",
         queryFn: async () => {
-            const res = await fetch("http://localhost:3000/menu/count-each-category");
+            const res = await fetch("https://food-delivery-server-hosting.onrender.com/menu/count-each-category");
             return res.json();
         }
     });

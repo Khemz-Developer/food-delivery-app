@@ -20,7 +20,7 @@ const CartPage = () => {
   const handleDecrease = async (item) => {
     console.log(item._id);
     if (item.quantity > 1) {
-      fetch(`http://localhost:3000/cart/${item._id}`, {
+      fetch(`https://food-delivery-server-hosting.onrender.com/cart/${item._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const CartPage = () => {
   //handle increase quantity function
   const handleIncrease = async (item) => {
     console.log(item._id);
-    fetch(`http://localhost:3000/cart/${item._id}`, {
+    fetch(`https://food-delivery-server-hosting.onrender.com/cart/${item._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +99,7 @@ const CartPage = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:3000/cart/${item._id}`)
+          .delete(`https://food-delivery-server-hosting.onrender.com/cart/${item._id}`)
           .then((response) => {
             if (response) {
               refetch();
