@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: false, // Add this line to disable dark mode variants
   theme: {
     extend: {
       colors: {
@@ -16,5 +17,8 @@ export default {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light"], // Force daisyUI to use only light theme
+    darkTheme: "light", // Set the dark theme to light as well
+  }
 }
-
